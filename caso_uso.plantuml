@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+
+actor "Aluno" as admin
+
+' Casos implementados na primeira sprint
+usecase "Login" as Login #palegreen
+usecase "Logout" as Logout #palegreen
+
+admin --> Login
+admin --> Logout
+
+rectangle "Práticas TDD 5" {
+  usecase "Cadastrar Link" as Cadastrar
+  usecase "Listar Link" as Listar
+  usecase "Atualizar Link" as Atualizar
+  usecase "Remover Link" as Remover
+
+  admin --> Cadastrar
+  admin --> Listar
+  admin --> Atualizar
+  admin --> Remover
+}
+
+@enduml
