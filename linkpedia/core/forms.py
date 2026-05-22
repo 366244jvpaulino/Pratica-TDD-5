@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.forms import ModelForm
 
+from .models import LinkModel
+
 class LoginForm(ModelForm):
     class Meta:
         model = User
@@ -46,3 +48,19 @@ class LoginForm(ModelForm):
                 raise ValidationError("Senha incorreta para o e-mail informado.")
 
             self.user = user
+
+
+class LinkModelForm(ModelForm):
+    class Meta:
+        model = LinkModel
+        fields = ('titulo', 'link', 'observacao')
+        labels = {
+            'titulo': 'Título:',
+            'link': 'Link:',
+            'observacao': 'Observação:',
+        }
+        widgets = {
+            'titulo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Digite o título do link'}),
+            'link': forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'Digite a URL'}),
+            'observacao': forms.Textarea(attrs={'class': 'form-control', 'rows': 4, 'placeholder': 'Digite uma observação opcional'}),
+        }

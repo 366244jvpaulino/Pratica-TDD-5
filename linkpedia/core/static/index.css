@@ -1,0 +1,101 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.page-background {
+  min-height: 100vh;
+}
+
+.page-body-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-main {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-card {
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+  background-color: rgba(248, 249, 250, 0.98);
+  color: #343a40;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 680px;
+}
+
+.page-card h2 {
+  letter-spacing: 0.02em;
+}
+
+.dashboard-card {
+  border: 1px solid rgba(33, 37, 41, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.actions-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.logout-action {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.logout-action:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+@media (min-width: 576px) {
+  .actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.btn-action {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0.95rem 1.1rem;
+  font-weight: 600;
+}
+
+.btn-action i {
+  font-size: 0.95rem;
+}
+
+.btn-action:hover {
+  transform: translateY(-1px);
+}
+
+.login-icon {
+  font-size: 3rem;
+  color: #0d6efd;
+}
+
+.logout-icon {
+  font-size: 3rem;
+  color: #198754;
+}
+
+.btn-login {
+  margin-top: 1rem;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.form-label {
+  margin-top: 1rem;
+}
